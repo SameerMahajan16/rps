@@ -1,3 +1,4 @@
+
 // Get the user's choice
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
@@ -55,6 +56,7 @@ const getUserChoice = (userInput) => {
         return "User wins!";
       }
     }
+
   };
   
   // Play the game
@@ -64,9 +66,3 @@ const getUserChoice = (userInput) => {
     console.log(`Computer choice: ${computerChoice}`);
     console.log(determineWinner(userChoice, computerChoice));
   };
-  
-  
-
-  
-  
-  
