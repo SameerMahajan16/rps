@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
-  <title> Rock Paper Scissors</title>
-  <!-- fonts -->
+  <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<!--Every single image on this site is from google and is not my own.-->
 
 <body>
 
   <div class="container">
     <!-- Header Section-->
-
-    <!-- Hero-->
     <div class="col-12 p-5 text-center">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
@@ -22,70 +17,56 @@
         </div>
       </div>
     </div>
-    <!-- Hero End-->
+
     <!-- Description-->
     <div class="col-12 my-3 my-lg-0 p-3 db text-center">
       <p class="m-3">
-        Select Rock, Paper, or Scissors to play against the computer. Rock beats Scissors, Scissors cuts Paper, and
-        Paper covers Rock. Best out of 3!
+        Select Rock, Paper, or Scissors to play against the computer. Rock beats Scissors, Scissors cuts Paper, and Paper covers Rock. Best out of 3!
       </p>
     </div>
-    <!-- Description END-->
-  </div>
-  <!-- Header Section END-->
-  <!-- Buttons START-->
-  <div  class="row divy">
-    <div id="hideAtEndOfGame1" class="col-12 col-lg-6">
-      <div id="showuserchoice"></div>
-      <button id="rock" onclick="playGame('rock')"></button>
-      <button id="paper" onclick="playGame('paper')"></button>
-      <button id="scissors" onclick="playGame('scissors')"></button>
-      <!-- Buttons END-->
-      <!--display choices start-->
-    </div>
-    <div id="hideAtEndOfGame2" class="buttondiv col-12 col-lg-6">
-      <button id="Userch">
-      </button>
-      <button id="Computerchoice">
 
-      </button>
+    <!-- Buttons START-->
+    <div class="row divy">
+      <div id="hideAtEndOfGame1" class="col-12 col-lg-6">
+        <div id="showuserchoice"></div>
+        <img id="rock" src="rock.png" alt="Rock" class="game-button" onclick="playGame('rock')" />
+        <img id="paper" src="paper.jpg" alt="Paper" class="game-button" onclick="playGame('paper')" />
+        <img id="scissors" src="sis.png" alt="Scissors" class="game-button" onclick="playGame('scissors')" />
+      </div>
+
+      <!-- Display choices-->
+      <div id="hideAtEndOfGame2" class="buttondiv col-12 col-lg-6">
+        <button id="Userch">User:</button>
+        <button id="Computerchoice">Computer:</button>
+      </div>
+
+      <!-- Score-->
+      <hr class="line">
+      <div>
+        <h1 id="userScoreDisplay" class="score">USER SCORE: 0</h1>
+      </div>
+      <div>
+        <h1 id="compScoreDisplay" class="score">COMPUTER SCORE: 0</h1>
+      </div>
+
+      <!-- Winner-->
+      <hr class="line">
+      <div class="sc">
+        <h1 id="winnerDisplayMsg" class="score">Round Result</h1>
+      </div>
     </div>
-    <!--display choices end-->
-    <!--score starts-->
-    <hr class="line">
-    <div>
-      <h1 id="userScoreDisplay" class="score">
-    </div>
-    <div>
-      <h1 id="compScoreDisplay" class="score">COMPUTER SCORE: 0
-    </div>
-    <!--score ends-->
-    <!-- winner START-->
-    <hr class="line">
-    <div class="sc">
-      <h1 id="winnerDisplayMsg" class="score">Round Result
+
+    <!-- Refresh-->
+    <div class="col-12" id="refresh">
+      <button id="restartbtn" onclick="window.location.reload()">Restart</button>
     </div>
   </div>
-  <!-- winner END-->
-  <!-- Refresh START-->
-  <div class="col-12" id="refresh">
-    <button id="restartbtn" onclick="window. location. reload()">Restart</button>
-  </div>
-  <!-- Refresh END-->
-  <!-- footer START -->
+
   <footer class="text-center text-white">
-
-    <!-- Grid container -->
-
-    <!-- Copyright -->
     <div class="text-center p-3" style="background-color: transparent"></div>
-    <!-- Copyright -->
   </footer>
-  <!-- footer END -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
