@@ -48,17 +48,24 @@ const determineWinner = (userChoice, computerChoice) => {
 const updateScores = (result) => {
   if (result === "User wins!") {
     userScore++;
+
     document.getElementById("userScoreDisplay").textContent = `USER SCORE: ${userScore}`;
   } else if (result === "Computer wins!") {
     compScore++;
+ 
     document.getElementById("compScoreDisplay").textContent = `COMPUTER SCORE: ${compScore}`;
   }
-
-    // Disable buttons when game is over
-    if (userScore > 3) {
-      alert("aeae")
-    }
 };
+function checkEndGame(userScore, compScore) {
+  // Disable buttons when game is over
+  if (userScore > 3) {
+    alert("You Won Winner! (press restart to play again)");
+
+  }
+  if (compScore > 3) {
+    alert("You Lost Loser! ");
+  }
+}
 
 // Function to play the game
 const playGame = (userChoice) => {
@@ -74,5 +81,6 @@ const playGame = (userChoice) => {
 
   // Update scores
   updateScores(result);
+  checkEndGame(userScore, compChoice);
 
   }

@@ -27,7 +27,7 @@ h1 {
 /* Container for the game content */
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 10000px;
   margin: 0 auto;
 }
 
@@ -55,10 +55,6 @@ button {
   transition: background-color 0.3s;
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
 
 /* Score and Winner Display */
 .score {
